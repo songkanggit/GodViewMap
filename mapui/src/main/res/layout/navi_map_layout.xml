@@ -1,0 +1,16 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <com.jiahuan.svgmapview.SVGMapView
+        android:id="@+id/navi_map_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </com.jiahuan.svgmapview.SVGMapView>
+    <Button
+        android:id="@+id/trigger"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Location"/>
+</FrameLayout>

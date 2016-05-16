@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<!-- ******************************以下为Xml中的字符串引用******************************** -->
+    
+    <string name="app_name">神泉峡旅游</string>
+    <string name="outdoor_title">户外运动</string>
+    <string name="outdoor_team">战队模式</string>
+    <string name="main_outdoor">户外运动</string>
+    <string name="main_map">旅游导览</string>
+    <string name="main_farmyard">农家小舍</string>
+    <string name="main_info">我的</string>
+    <string name="farmyard_item_food">特色美食</string>
+    <string name="farmyard_food_price_1">大盘鸡  ¥128</string>
+    <string name="farmyard_food_price_2">特色炸带鱼  ¥78</string>
+    <string name="farmyard_playing">玩家大精彩</string>
+    <string name="farmyard_piaoliu">极限漂流</string>
+    <string name="farmyard_rest">安宿</string>
+    <string name="farmyard_rest_text">住宿房间</string>
+    <string name="login_top_name">个人账号登录</string>
+    <string name="login_phone_hint">请输入您的手机号码</string>
+    <string name="login_code_hint">输入验证码</string>
+    <string name="login_code_button">获取验证码</string>
+    <string name="login_button">进入体验</string>
+    <string name="info_set_set">设置</string>
+    <string name="info_set_save">保存</string>
+    <string name="info_set_name">昵称</string>
+    <string name="info_set_sex">性别</string>
+    <string name="info_set_height">身高</string>
+    <string name="info_set_weight">体重</string>
+    <string name="info_set_sex_male">男</string>
+    <string name="info_set_sex_female">女</string>
+    <string name="info_set_logout">退出登录</string>
+    <string name="map_scene_weather">晴</string>
+    <string name="map_scene_temp">26℃</string>
+    <string name="map_scene_wind">＜2级</string>
+    <string name="map_scene_wear">T恤</string>
+    <string name="team_button_square">广场</string>
+    <string name="team_button_myteam">我的战队</string>
+    <string name="dialog_sendsos">SOS功能会将您的位置坐标发送至救援中心，你确定发送吗？</string>
+    <string name="dialog_sendsos_send">发送</string>
+    <string name="dialog_sendsos_cancel">取消</string>
+    <string name="dialog_jointeam_button">知道了</string>
+    <string name="dialog_jointeam_join">加入</string>
+    <string name="dialog_jointeam_cancel">取消</string>
+    <string name="info_phone">15151516688</string>
+    <string name="info_height">175cm</string>
+    <string name="info_weight">70kg</string>
+    <string name="info_steps">19999步</string>
+    <string name="info_distance">14.66米</string>
+    <string name="info_calory">258cal</string>
+    <string name="info_space">|</string>
+    <string name="info_news">园区新闻</string>
+    <string name="outdoor_search_hint">搜索景点</string>
+    <string name="outdoor_search_alpha">0.8</string>
+    <string name="outdoor_ruler_100">100米</string>
+    <string name="team_create_name">战队名称</string>
+    <string name="team_create_start">路线起点</string>
+    <string name="team_create_end">路线终点</string>
+    <string name="team_create_dateline">截止日期</string>
+    <string name="team_create_isopen">公开活动</string>
+    <string name="team_create_pwd">战队密码</string>
+    <string name="team_create_createteam">创建战队</string>
+    <string name="team_pay_password">请输入战队密码</string>
+    
+    
+    
+    
+<!-- ******************************以下为Xml中的ImageView的文字说明******************************** -->
+	<string name="img_main_outdoor">首页导航栏《户外运动》对应图片</string>
+	<string name="img_main_map">首页导航栏《旅游导览》对应图片</string>
+	<string name="img_main_farmyard">首页导航栏《农家小舍》对应图片</string>
+	<string name="img_main_info">首页导航栏《我的》对应图片</string>
+	<string name="action_settings">加入非公开战队输入密码的界面</string>
+	<string name="farmyard_listview_mainpicture">farmyard Item 项的图片</string>
+	<string name="farmyard_listview_phone">电话图标</string>
+	<string name="farmyard_listview_location">位置图标</string>
+	<string name="farmyard_listview_coupon">优惠图标</string>
+	<string name="farmyard_listview_food">特色美食图标</string>
+	<string name="farmyard_moni">farmyard(模拟)</string>
+	<string name="info_set_seximg">男女</string>
+	<string name="img_all">所有图片的介绍</string>
+	
+</resources>

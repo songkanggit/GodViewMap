@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/color_white"
+    >
+    <ListView
+        android:id="@+id/farmyard_listview" 
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:dividerHeight="@dimen/dp_10"
+        android:divider="@color/color_F8"
+        ></ListView>
+     
+</RelativeLayout>

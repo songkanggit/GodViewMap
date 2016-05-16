@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <path id="1" startx="321" starty="98" endx="321" endy="257"/>
+    <path id="2" startx="321" starty="257" endx="504" endy="257"/>
+    <path id="3" startx="504" starty="257" endx="504" endy="428"/>
+    <path id="4" startx="321" starty="257" endx="138" endy="257"/>
+    <path id="5" startx="138" starty="257" endx="138" endy="282"/>
+    <path id="6" startx="138" starty="282" endx="78" endy="282"/>
+    <path id="7" startx="138" starty="282" endx="138" endy="329"/>
+    <path id="8" startx="138" starty="329" endx="213" endy="329"/>
+    <path id="9" startx="213" starty="329" endx="213" endy="428"/>
+    <path id="10" startx="213" starty="428" endx="418" endy="428"/>
+</resources>
