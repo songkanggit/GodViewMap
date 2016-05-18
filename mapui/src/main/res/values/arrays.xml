@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="sceneries">
-        <item>国家天安门</item>
-        <item>国家博物馆</item>
-        <item>国家长城</item>
-        <item>张家界</item>
-        <item>张闯家乡河南驻马店</item>
-        <item>张欢的小窝</item>
-        <item>张婷婷的小窝</item>
+        <item id='0'>官帽</item>
+        <item >水天一线</item>
+        <item>女娲娘娘庙</item>
+        <item>金蝉</item>
     </string-array>
 </resources>

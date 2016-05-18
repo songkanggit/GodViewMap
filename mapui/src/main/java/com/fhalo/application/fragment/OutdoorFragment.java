@@ -21,6 +21,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.ImageButton;
@@ -35,15 +36,18 @@ import com.fhalo.application.base.PublicMethod;
 import com.fhalo.application.dialog.SendSOSDialog;
 import com.fhalo.overlay.PathOverlay;
 import com.fhalo.utils.AssetsHelper;
+import com.fhalo.utils.LocationSvgInfo;
 import com.fhalo.utils.ShortestPathCalculator;
 import com.jiahuan.svgmapview.SVGMapView;
 import com.jiahuan.svgmapview.SVGMapViewListener;
 import com.jiahuan.svgmapview.overlay.SVGMapLocationOverlay;
 
+import java.util.HashMap;
+
 public class OutdoorFragment extends BaseFragment implements BaseInterface, OnClickListener {
 
 	private SVGMapView mapView;
-
+	private MyApplication app;
 	private PathOverlay pol;
 	private SensorManager mSensorManager;
 	private LocationManager mLocationManager;
@@ -60,15 +64,21 @@ public class OutdoorFragment extends BaseFragment implements BaseInterface, OnCl
 	private AutoCompleteTextView searchScenery;
 	private String[] sceneries;
 
+	private static HashMap<String, LocationSvgInfo> locationMap = new HashMap<>();
+	static {
+			locationMap.put("官帽", new LocationSvgInfo("官帽", 200, 400));
+			locationMap.put("水天一线", new LocationSvgInfo("官帽", 50, 50));
+			locationMap.put("女娲娘娘庙", new LocationSvgInfo("官帽", 550, 480));
+			locationMap.put("金蝉", new LocationSvgInfo("官帽", 250, 330));
+	}
+
 	@Override
 	public View onCreateView(LayoutInflater inflater,
 			@Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-		// TODO Auto-generated method stub
 		return inflater.inflate(R.layout.fragment_outdoor, null);
 	}
 	@Override
 	public void onActivityCreated(@Nullable Bundle savedInstanceState) {
-		// TODO Auto-generated method stub
 		super.onActivityCreated(savedInstanceState);
 		initView();
 		initData();
@@ -83,6 +93,8 @@ public class OutdoorFragment extends BaseFragment implements BaseInterface, OnCl
 	}
 	@Override
 	public void initData() {
+		app = (MyApplication) getActivity().getApplication();
+
         searchButton.setOnClickListener(this);
 		sosImageView.setOnClickListener(this);
 		myinfoImageView.setOnClickListener(this);
@@ -90,11 +102,20 @@ public class OutdoorFragment extends BaseFragment implements BaseInterface, OnCl
 		ArrayAdapter<String> adapter=new ArrayAdapter<>(getActivity(), R.layout.item_main_outdoor_search, sceneries);
 		searchScenery.setThreshold(0);
 		searchScenery.setAdapter(adapter);
+		searchScenery.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+			@Override
+			public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+				String selectText = (String) adapterView.getItemAtPosition(i);
+				if(locationMap.containsKey((Object)selectText)) {
+					ShortestPathCalculator spc= new ShortestPathCalculator(app.getPathLines());
+					pol.setPathLines(spc.getShortestPath(new Point(200, 200), new Point(locationMap.get((Object)selectText).getSvg_abs_x(),
+							locationMap.get((Object)selectText).getSvg_abs_y())));
+					mapView.refresh();
+				}
+			}
+		});
 
 		//==========================================================
-
-//		pg = new PathGenerator();
-//		pg.parse(getActivity());
 
 		mLocationManager = (LocationManager) getActivity().getSystemService(Context.LOCATION_SERVICE);
 		Criteria mCriteria = new Criteria();
@@ -214,10 +235,8 @@ public class OutdoorFragment extends BaseFragment implements BaseInterface, OnCl
                 startActivity(teamIntent);
                 break;
             case R.id.main_outdoor_search_button:
-                MyApplication app = (MyApplication) getActivity().getApplication();
-                ShortestPathCalculator spc= new ShortestPathCalculator(app.getPathLines());
-                pol.setPathLines(spc.getShortestPath(new Point(200, 200), new Point(550, 550)));
-                mapView.refresh();
+
+
                 break;
 
 		}

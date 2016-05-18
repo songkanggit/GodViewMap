@@ -62,9 +62,6 @@
     <string name="team_create_createteam">创建战队</string>
     <string name="team_pay_password">请输入战队密码</string>
     
-    
-    
-    
 <!-- ******************************以下为Xml中的ImageView的文字说明******************************** -->
 	<string name="img_main_outdoor">首页导航栏《户外运动》对应图片</string>
 	<string name="img_main_map">首页导航栏《旅游导览》对应图片</string>
